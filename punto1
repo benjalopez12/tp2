@@ -1,0 +1,15 @@
+var CANTIDAD_NOMBRES = 10;
+function obtenerNombres(cantidad) {
+    var nombres = [];
+    for (var i = 0; i < cantidad; i++) {
+        var nombre = prompt(`Ingrese el nombre del estudiante #${i + 1}:`);
+        nombres.push(nombre);
+    }
+    return nombres;
+}
+var nombres = obtenerNombres(CANTIDAD_NOMBRES);
+nombres.sort();
+console.log("Lista de nombres ordenada:");
+for (var i = 0; i < nombres.length; i++) {
+    console.log((i + 1) + ". " + nombres[i]);
+}
